@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <meta charset="UTF-8" />
+     <meta name="author" content="chiheb" />
+    <title> Exercices</title>
+  <!-- <link href="style3.css" rel="stylesheet" type="text/css">-->
+	 <style>
+	 body{background:aqua;
+	 
+	 }
+	 </style>
+      
+ </head>
+ <body>
+ 
+ 
+ <form name="quiz" id="quiz">
+ <div>
+  <p>1 how we can write this number :4</p>
+  <p><input type="radio" name="question1" value="1">four</p>
+  <p><input type="radio" name="question1" value="2">ten</p>
+  <p><input type="radio" name="question1" value="3">for</p>
+  <p><input type="radio" name="question1" value="4">two</p>
+  
+  </div>
+  <div>
+  <p>2 are uncle membre of the family</p>
+  <p><input type="radio" name="question2" value="1">Yes</p>
+  <p><input type="radio" name="question2" value="2">NO</p>
+  
+  </div>
+  <div>
+  <p>3 who is your dad's parents</p>
+  <p><input type="radio" name="question3" value="1">aunt and ancle</p>
+  <p><input type="radio" name="question3" value="2">sister and brother</p>
+  <p><input type="radio" name="question3" value="3">mum and dad</p>
+  <p><input type="radio" name="question3" value="4">grandmather and grandfather</p>
+  
+  </div>
+  <div>
+  <p>4 what is the lastl alphabet</p>
+  <p><input type="radio" name="question4" value="1">E</p>
+  <p><input type="radio" name="question4" value="2">A</p>
+  <p><input type="radio" name="question4" value="3">Z</p>
+  <p><input type="radio" name="question4" value="4">G</p>
+  
+  </div>
+  <div>
+  <p>5 the number next five is:</p>
+  <p><input type="radio" name="question5" value="1">7</p>
+  <p><input type="radio" name="question5" value="2">1</p>
+  <p><input type="radio" name="question5" value="3">6</p>
+  <p><input type="radio" name="question5" value="4">5</p>
+  
+  </div>
+  <div>
+  <p>6 the right order of alphabet is :</p>
+  <p><input type="radio" name="question6" value="1">ABCDGJUFRVBPXVGKMLQZ</p>
+  <p><input type="radio" name="question6" value="2">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+  <p><input type="radio" name="question6" value="3">ABCVWDEFGHOPQIJKLMNOPQRSTU<P>
+  
+  
+  </div>
+  <input type="button" value="Done" onClick="check()"></input>
+</form>
+
+<script  type="text/javascript">
+function check() {  
+    var c=0;
+	var q1=document.quiz.question1.value;
+	var q2=document.quiz.question2.value;
+	var q3=document.quiz.question3.value;
+	var q4=document.quiz.question4.value;
+	var q5=document.quiz.question5.value;
+	var q6=document.quiz.question6.value;
+	var result=document.getElementById('result');
+	var quiz=document.getElementById("quiz");
+	if(q1=="four") {c++}
+	if(q2=="Yes"){c++}
+	if(q3=="grandmather and grandfather") {c++}
+	if(q4==" z"){c++}
+	if(q5=="6") {c++}
+	if(q6=="ABCDEFGHIJKLMNOPQRSTUVWXYZ"){c++}
+	quiz.style.display="none";
+	
+	if (c<=3) {
+	result.document.write='Your result is ${c}.It s not so good please try to work on yourself.'
+	}else{
+	result.document.write='your result is ${c}.It s Awsome.keep it up.'
+	}
+	}
+</script>
+<p id="result"></p>
+
+
+ </body>
+ </html>
